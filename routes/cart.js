@@ -20,7 +20,8 @@ sar=sess.sar
 skua.push(sar[i].sku)
     }
 ind=    skua.indexOf(rsku)
-    if(!ind>=0){
+    console.log(ind)
+    if(ind>-1){
     sar[ind].sku=rsku
     sar[ind].uni=rset
     }
