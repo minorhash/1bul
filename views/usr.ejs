@@ -7,29 +7,41 @@
 
 <!-- menu -->
 
-<div class="container-fluid">
-<div class="row">
-<div class="col-sm-2">
+<div class="columns">
+<div class="column is-one-three">
 <% include shop/cat %>
 </div>
 
-<div class="col-sm-10">
+<div class="column">
 <br>
 
 <% if(par=="sign") { %>
-
 <% include usr/sign %>
+
 <% } else if(par=="in") { %>
 <% include usr/in %>
+
+<% } else if(par=="my") { %>
+<% include usr/my %>
+
+<% } else if(par=="fav") { %>
+<% include usr/fav %>
+
+<% } else if(par=="his") { %>
+<% include usr/his %>
+
+<% } else if(par=="up") { %>
+<% include usr/up %>
+
+
+
 <% } %>
 
 </div><!-- /col12-->
 </div><!-- /row-->
 
 
-</div><!-- /container-fluid-->
 
-<div class="foot"><% include par/foot %></div>
 </body>
 </html>
 
