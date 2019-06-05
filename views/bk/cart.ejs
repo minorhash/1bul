@@ -10,7 +10,7 @@
 		<% include shop/cat%>
 		</div><!-- col1 4-->
 
-<% if(sar!==null){ %>
+<% if(sar.length!==0){ %>
 <div class="column is-two-quarters has-background-info"> 
 
 <% include shop/cart %>
@@ -18,15 +18,10 @@
 
 </div><!-- col3 4-->
 
-<% if(sum!==0){ %>
 <div class="column is-one-quarter has-background-primary" style="">
-
     <% include shop/sum %>
     <% include shop/pay%>
-
 </div><!-- col3 4-->
-<% }  %>
-
 <% } else { %>&nbsp;
 <p class="button is-info"><%=shop.noit %></p>
 <% }  %>
@@ -36,5 +31,6 @@
 </section> 
 
 </body>
+
 </html>
 
