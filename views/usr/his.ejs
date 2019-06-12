@@ -1,30 +1,12 @@
 <% if(usr) { %>
-welcome <%= usr.name %><br>
-<% if(his) { %>
-<% for (var i=0;i<his.length;i++){ %>
-<%= his[i].pid %><br>
+<header class="has-t-cen bkg-ali">
+    welcome <%= usr.name %></header><br>
+<div class="row">
+<div class="col"><% include ./pid%></div>
 
-<% } %>
+<div class="col bkg-ali"><% include ./pal%></div>
+</div><!-- row-->
+
 <%} else {%>
-no arr
-<% } %>
-<%} else {%>
-<h1>ログイン</h1>
-
-<form action="/usr-log" method="post">
-E-mail:<br><input class="input" id="ema" type="email" name="email"  size="15">
-
-<br>
-Password:<br><input class="input" id="pss" type="text" name="pss" value="" size="15">
-<br><br>
-<button type="submit" class="button is-info">ログイン</button>
-</form>
-
-<br>
-アカウントをお持ちでない方<br><br>
-
-<form action="/usr-sign" method="get">
-<button type="submit" class="button is-danger">サインイン</button>
-</form>
-
+<% include ./in%>
 <%} %>
