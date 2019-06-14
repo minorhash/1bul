@@ -14,7 +14,7 @@ var getIte=function(req, res, next) {
     mer=db.allMer()
     next()}
 var chk=function(req, res, next) {
-    console.log(ses)
+    console.log(sess)
     next()}
 
 var cb=function(req, res ) {

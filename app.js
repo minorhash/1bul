@@ -39,8 +39,7 @@ app.use(  i18n({    translationsPath: path.join(__dirname, 'i18n/'+nat[i]),
 }
 
 // route =================================
-var arr=["index",
-"item","info","cat"]
+var arr=["index","item","info","cat"]
 arr.forEach(function(ite){
 ite=require('./routes/'+ite)
 app.use('/', ite)
@@ -69,7 +68,7 @@ res.status(404);
 
 res.format({
 html: function () {
-res.render('404', { url: req.url })
+    res.render('err/404', { url: req.url })
 }
 })
 });
@@ -79,6 +78,6 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
-  res.render('error');
+    res.render('err/error');
 });
 module.exports = app;

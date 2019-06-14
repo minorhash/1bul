@@ -19,7 +19,7 @@ var chk = function(req, res, next) {
 
 var gcb = function(req, res) {
 var obj={title: "cancelled",usr:usr}
-res.render("cancel",obj)}
+    res.render("pay/cancel",obj)}
 
-router.get("/cancel", [getSes,chk, gcb])
+router.get("/pay/cancel", [getSes,chk, gcb])
 module.exports = router

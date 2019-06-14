@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html>
 <% include ../par/head%>
-<%if(usr){%>
-<% include ../usr/nav%>
-<%}else{%>
 <% include ../par/nav%>
-<%}%>
-
-
 <body>
 
 <!-- menu -->
@@ -21,7 +15,9 @@
 
 <div class="col"> 
 <% if(usr){ %>
-<% include ../pay/sel%>
+
+<% include ../pay/can%>
+
 <% } else { %>
 <% include ../usr/in%>
 <% } %>

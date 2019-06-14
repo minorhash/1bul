@@ -96,8 +96,8 @@ var chk= function(req, res, next) {
 
 var cb= function(req, res, next) {
 var obj={usr:usr,title:"buyer",pid: pid,payid:payid,item:item,sar:sar}
-res.render("success",obj)}
+    res.render("pay/success",obj)}
 
 var arr=[getSes,getSum,getPid,exePal,senEma,chk,cb]
-router.get("/success", arr)
+router.get("/pay/success", arr)
 module.exports = router

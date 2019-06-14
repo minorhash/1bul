@@ -1,17 +1,41 @@
+<p class="has-t-cen bkg-ali">my page</p>
 <% if(usr) { %>
-welcome 
-<%= usr.name%><%=shop.sama%>
+<p><%= usr.name %><%=iusr.sama%></p>
+<br>
 
 <% include par/out%>
 
+<div class="row">
+<div class="col">
 <% if( niq){ %>
+<div class="level bkg-ali p-10">
 <% for(var i=0;i<niq.length;i++){%>
 <% if(niq[i]!=null && niq[i]!=undefined && niq[i]!=={}){%>
-<%=shop.sku%>:tms-<%= niq[i] %><br>
+
+<div class="card ">
+<p class="has-t-cen">
+<%=shop.sku%>:tms-<%= niq[i] %>
+</p>
+<div class=card-image">
+
+    <a href="item<%= niq[i]%>?sku=<%= niq[i]%>">
+        <img src="../img/cd/png/<%= niq[i] %>.png">
+    </a>
+
+<br>
+</div><!-- img-->
+</div><!-- card-->
 
 <%} %><!-- if-->
 <%} %><!-- for-->
+</div>
+
+<div class="col">
+</div>
+</div>
+
 <%} else {%>no niq<%} %>
+
 
 <%} else {%>
 <% include ./in%>

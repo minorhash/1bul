@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html>
-<% include ../par/head%>
-<%if(usr){%>
-<% include ../usr/nav%>
-<%}else{%>
-<% include ../par/nav%>
-<%}%>
-
-
+<% include par/head%>
+<% include par/nav%>
 <body>
 
 <!-- menu -->
@@ -15,15 +9,17 @@
 <section class="section">
 <div class="row">
 <div class="col is-one-4 ">
-<% include ../shop/cat %>
+<% include shop/cat %>
 
 </div>
 
 <div class="col"> 
 <% if(usr){ %>
-<% include ../pay/sel%>
+
+<% include pay/suc%>
+
 <% } else { %>
-<% include ../usr/in%>
+<% include usr/in%>
 <% } %>
 </div><!-- /col-->
 </div><!-- /cols-->
